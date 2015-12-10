@@ -12,32 +12,6 @@ appCtrl.controller('SimonBtnController', function($interval){
     flashSequence();
   }
 
-  var flashSequence = function(){
-    var i = 0;
-    $interval(function(){
-      if(active == ''){
-        active = real_sequence[i];
-        i++;
-      } else {
-        active = '';
-      }
-    }, 500, real_sequence.length*2);
-    /*for(var i=0; i<real_sequence.length; i++){
-      console.log('i:'+i);
-      active = real_sequence[i];
-      $timeout(function(){
-        active = '';
-      }, 1000);
-    }*/
-    /*real_sequence.forEach(function(step){
-        active = step;
-        $timeout(function () {
-          active = '';
-        }, 1000);
-    });*/
-    turn = 'PLAYER';
-  }
-
   this.isActive = function(div){
     return active == div;
   }
@@ -62,4 +36,18 @@ appCtrl.controller('SimonBtnController', function($interval){
       }
     }
   }
+
+  var flashSequence = function(){
+    var i = 0;
+    $interval(function(){
+      if(active == ''){
+        active = real_sequence[i];
+        i++;
+      } else {
+        active = '';
+      }
+    }, 500, real_sequence.length*2);
+    turn = 'PLAYER';
+  }
+
 });
