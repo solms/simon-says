@@ -1,32 +1,33 @@
 /* Style the quarter circles */
 .simon-btn{
+  background-color: #117300;
   display: inline-block;
   width: 100px;
   height: 100px;
 }
-.simon-btn:active{
-  background-color: red !important;
+.active{
+  background-color: black !important;
 }
 #simon-br{
-  background: #006699;
+  background-color: blue;
   border-radius: 0 0 100px 0;
   -moz-border-radius: 0 0 100px 0;
   -webkit-border-radius: 0 0 100px 0;
 }
 #simon-bl{
-   background: #117300;
+   background-color: yellow;
    border-radius: 0 0 0 100px;
    -moz-border-radius: 0 0 0 100px;
    -webkit-border-radius: 0 0 0 100px;
 }
 #simon-tr{
-   background: #006699;
+   background-color: red;
    border-radius: 0 100px 0 0;
    -moz-border-radius: 0 100px 0 0;
    -webkit-border-radius: 0 100px 0 0;
 }
 #simon-tl{
-   background: #117300;
+  background-color: green;
    border-radius: 100px 0 0 0;
    -moz-border-radius: 100px 0 0 0;
    -webkit-border-radius: 100px 0 0 0;

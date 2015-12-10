@@ -2,13 +2,23 @@ var appCtrl = angular.module('simonApp', []),
     buttons = ['TL', 'TR', 'BL', 'BR'],
     real_sequence = [],
     user_sequence = [],
-    active = '';
+    active = '',
+    turn = 'AI';
 
-appCtrl.controller('SimonBtnController', function(){
+appCtrl.controller('SimonBtnController', function($timeout){
   // Let the games begin!
   this.start = function(){
     real_sequence.push(buttons[Math.floor(Math.random()*4)]);
     flashSequence();
+  }
+
+  var flashSequence = function(){
+    real_sequence.forEach(function(step){
+        active = step;
+        $timeout(function () {
+          active = '';
+        }, 1000);
+    });
   }
 
   this.isActive = function(div){
@@ -17,13 +27,8 @@ appCtrl.controller('SimonBtnController', function(){
 
   // Track the buttons the user pressed
   this.clicked = function(who){
-    active = who;
+    if(turn == 'PLAYER'){
+        active = who;
+    }
   }
 });
-
-// Show the user the real sequence
-function flashSequence(){
-  real_sequence.forEach(function(step){
-    alert(step);
-  });
-}
