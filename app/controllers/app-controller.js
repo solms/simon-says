@@ -20,6 +20,10 @@ appCtrl.controller('SimonBtnController', function($interval){
   this.clicked = function(btn){
 
     if(turn == 'PLAYER' && user_sequence.length<real_sequence.length){
+      active = btn;
+      $interval(function(){
+        active = '';
+      }, 100, 1);
       user_sequence.push(btn);
     }
     if(turn == 'PLAYER' && user_sequence.length == real_sequence.length){
