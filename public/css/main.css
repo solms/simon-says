@@ -1,0 +1,36 @@
+/* Style the quarter circles */
+.simon-btn{
+  display: inline-block;
+}
+#simon-br{
+  width: 100px;
+  height: 100px;
+  background: #006699;
+  border-radius: 0 0 100px 0;
+  -moz-border-radius: 0 0 100px 0;
+  -webkit-border-radius: 0 0 100px 0;
+}
+#simon-bl{
+   width: 100px;
+   height: 100px;
+   background: #117300;
+   border-radius: 0 0 0 100px;
+   -moz-border-radius: 0 0 0 100px;
+   -webkit-border-radius: 0 0 0 100px;
+}
+#simon-tr{
+   width: 100px;
+   height: 100px;
+   background: #006699;
+   border-radius: 0 100px 0 0;
+   -moz-border-radius: 0 100px 0 0;
+   -webkit-border-radius: 0 100px 0 0;
+}
+#simon-tl{
+   width: 100px;
+   height: 100px;
+   background: #117300;
+   border-radius: 100px 0 0 0;
+   -moz-border-radius: 100px 0 0 0;
+   -webkit-border-radius: 100px 0 0 0;
+}
