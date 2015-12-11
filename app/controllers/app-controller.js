@@ -25,6 +25,12 @@ appCtrl.controller('SimonBtnController', function($interval){
         active = '';
       }, 100, 1);
       user_sequence.push(btn);
+      if(btn != real_sequence[user_sequence.length-1]){
+        console.log('Unlucky...');
+        real_sequence = [];
+        user_sequence = [];
+        turn = 'AI';
+      }
     }
     if(turn == 'PLAYER' && user_sequence.length == real_sequence.length){
       if(user_sequence.toString() == real_sequence.toString()){
@@ -33,11 +39,12 @@ appCtrl.controller('SimonBtnController', function($interval){
         user_sequence = [];
         real_sequence.push(buttons[Math.floor(Math.random()*4)]);
         flashSequence();
-      } else {
+      } /*else {
+        console.log('Unlucky...');
         real_sequence = [];
         user_sequence = [];
         turn = 'AI';
-      }
+      }*/
     }
   }
 
