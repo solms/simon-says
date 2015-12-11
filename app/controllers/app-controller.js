@@ -5,7 +5,10 @@ var appCtrl = angular.module('simonApp', []),
     active = '',
     turn = 'AI';
 
-appCtrl.controller('SimonBtnController', function($interval){
+appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope, $interval){
+  $scope.player = {
+    score: 0
+  };
   // Let the games begin!
   this.start = function(){
     real_sequence.push(buttons[Math.floor(Math.random()*4)]);
@@ -38,6 +41,7 @@ appCtrl.controller('SimonBtnController', function($interval){
         turn = 'AI';
         user_sequence = [];
         real_sequence.push(buttons[Math.floor(Math.random()*4)]);
+        $scope.player.score++;
         flashSequence();
       } /*else {
         console.log('Unlucky...');
@@ -61,4 +65,4 @@ appCtrl.controller('SimonBtnController', function($interval){
     turn = 'PLAYER';
   }
 
-});
+}]);
