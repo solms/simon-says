@@ -7,7 +7,7 @@ var appCtrl = angular.module('simonApp', []),
 
 appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope, $interval){
   $scope.player = {
-    score: 0
+    score: 1
   };
   // Let the games begin!
   this.start = function(){
