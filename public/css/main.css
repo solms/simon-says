@@ -43,6 +43,6 @@ body{
 #start{
   font-family: 'Nunito', sans-serif;
   padding: 10px 25px 10px 25px;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }

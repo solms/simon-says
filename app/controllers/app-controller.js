@@ -11,6 +11,9 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
   };
   // Let the games begin!
   this.start = function(){
+    $('html').css({
+      'background-color': '#FFF'
+    });
     real_sequence.push(buttons[Math.floor(Math.random()*4)]);
     flashSequence();
   }
@@ -29,10 +32,22 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
       }, 100, 1);
       user_sequence.push(btn);
       if(btn != real_sequence[user_sequence.length-1]){
+        $('html').css({
+          'background-color': '#D66'
+        });
         console.log('Unlucky...');
         real_sequence = [];
         user_sequence = [];
         turn = 'AI';
+      } else {
+        $('html').css({
+          'background-color': '#6D6'
+        });
+        $interval(function(){
+          $('html').css({
+            'background-color': '#FFF'
+          });
+        }, 150, 1)
       }
     }
     if(turn == 'PLAYER' && user_sequence.length == real_sequence.length){
