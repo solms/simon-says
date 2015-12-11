@@ -1,5 +1,5 @@
 #Simon Says
-A Simon Says game created as part of the FreeCodeCamp syllabus. The details can be viewed [here](http://www.freecodecamp.com/challenges/zipline-build-a-simon-game), but it involves reverse engineering (this)[http://codepen.io/Em-Ant/full/QbRyqq/].
+A Simon Says game created as part of the FreeCodeCamp syllabus. The details can be viewed [here](http://www.freecodecamp.com/challenges/zipline-build-a-simon-game), but it involves reverse engineering [this][http://codepen.io/Em-Ant/full/QbRyqq/).
 
 ####User Stories
 - As a user, I am presented with a random series of button presses.
