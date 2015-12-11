@@ -11,6 +11,7 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
   };
   // Let the games begin!
   this.start = function(){
+    $('#start').prop('disabled',true);
     $('html').css({
       'background-color': '#FFF'
     });
@@ -39,6 +40,7 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
         real_sequence = [];
         user_sequence = [];
         turn = 'AI';
+        $('#start').prop('disabled',false);
       } else {
         $('html').css({
           'background-color': '#6D6'

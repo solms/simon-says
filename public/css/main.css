@@ -46,3 +46,7 @@ body{
   border-radius: 3px;
   cursor: pointer;
 }
+
+#start:disabled{
+  cursor: not-allowed;
+}
