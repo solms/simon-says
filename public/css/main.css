@@ -9,6 +9,7 @@ body{
   display: inline-block;
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 .active{
   background-color: black !important;
@@ -43,4 +44,5 @@ body{
   font-family: 'Nunito', sans-serif;
   padding: 10px 25px 10px 25px;
   border-radius: 5px;
+  cursor: pointer;
 }
