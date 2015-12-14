@@ -50,3 +50,18 @@ body{
 #start:disabled{
   cursor: not-allowed;
 }
+
+/* Styl the drop down notification */
+/* Credit: http://stackoverflow.com/a/6504707 */
+#notification {
+    position:fixed;
+    top:0px;
+    width:100%;
+    z-index:105;
+    text-align:center;
+    font-weight:normal;
+    font-size:14px;
+    font-weight:bold;
+    color:white;
+    padding:5px;
+}
