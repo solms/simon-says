@@ -51,7 +51,7 @@ body{
   cursor: not-allowed;
 }
 
-/* Styl the drop down notification */
+/* Style the drop down notification */
 /* Credit: http://stackoverflow.com/a/6504707 */
 #notification {
     position:fixed;

@@ -3,10 +3,10 @@ var appCtrl = angular.module('simonApp', []),
     real_sequence = [],
     user_sequence = [],
     active = '',
-    turn = 'AI',
-    strict = false;
+    turn = 'AI';
 
 appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope, $interval){
+  $scope.strict = false;
   $scope.player = {
     score: 1
   };
@@ -39,7 +39,7 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
       if(btn != real_sequence[user_sequence.length-1]){
         dropdown('Unlucky...', '#F00');
         // If not in strict mode, display the sequence again
-        if(!strict){
+        if(!$scope.strict){
           user_sequence = [];
           flashSequence();
         }
