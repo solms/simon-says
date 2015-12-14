@@ -81,6 +81,8 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
     var i = 0;
     $interval(function(){
       if(active == ''){
+        new Audio('public/sounds/simonSound' + buttons.indexOf(real_sequence[i])
+                  + '.mp3').play();
         active = real_sequence[i];
         i++;
       } else {
