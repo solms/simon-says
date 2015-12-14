@@ -71,7 +71,15 @@ appCtrl.controller('SimonBtnController', ['$scope', '$interval', function($scope
         user_sequence = [];
         real_sequence.push(buttons[Math.floor(Math.random()*4)]);
         $scope.player.score++;
-        flashSequence();
+        if($scope.score == 20){
+          alert('YOU WIN! Congratulations.');
+          real_sequence = [];
+          user_sequence = [];
+          turn = 'AI';
+          $('#start').text('Start');
+        } else {
+          flashSequence();
+        }
       }
     }
   }
