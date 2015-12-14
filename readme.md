@@ -1,6 +1,8 @@
 #Simon Says
 A Simon Says game created as part of the FreeCodeCamp syllabus. The details can be viewed [here](http://www.freecodecamp.com/challenges/zipline-build-a-simon-game), but it involves reverse engineering [this](http://codepen.io/Em-Ant/full/QbRyqq/).
 
+####The app can be viewed [here](http://solms-says.herokuapp.com).
+
 ####User Stories
 - As a user, I am presented with a random series of button presses.
 - As a user, each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
